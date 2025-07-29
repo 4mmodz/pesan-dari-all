@@ -1,0 +1,79 @@
+body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      font-size: 3em;
+      text-shadow: 2px 2px #e91e63;
+    }
+
+    .btn {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #d81b60;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
+      animation: pulse 1s infinite;
+      margin: 20px auto;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+    }
+
+    .heart::before {
+      left: 100px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    .heart::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .output {
+      background: white;
+      color: #e91e63;
+      padding: 15px;
+      margin-top: 15px;
+      width: 80%;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #e91e63;
+      display: none;
+    }
